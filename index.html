@@ -13,7 +13,8 @@
     </noscript>
     <link rel="icon" href="https://img.icons8.com/cotton/64/4a90e2/movie-beginning--v1.png" sizes="16x16"
         type="image/png">
-    <script defer="defer" src="dist/js/main.js"></script>
+    <script defer="defer" src="dist/js/index.js"></script>
+    <script src="dist/js/popup.js"></script>
     <link href="dist/js/../css/main.css" rel="stylesheet">
 </head>
 
@@ -24,44 +25,44 @@
                 <div class="hamburger"><span></span> <span></span> <span></span></div>
                 <h1>映画<span>採点</span></h1>
                 <ul>
-                    <li><a href="#">ログイン/登録</a></li>
+                    <li><a href="#" id="btn">ログイン/登録</a></li>
                 </ul>
             </nav>
-            <!--打开弹窗按钮-->
-            <button id="btn">打开弹窗</button>
-            <!--弹窗-->
-            <div id="myModal">
-                <!--弹窗头部-->
-                <div class="modal">
-                    <div class="modal-header">
-                        <p>危险警告</p>
-                        <span class="close">&times;</span>
-                    </div>
-                    <!--弹窗文本-->
-                    <div class="modal-content">
-                        <p>您将进入一个不安全的页面</p>
-                    </div>
-                    <!--弹窗底部-->
-                    <div class="modal-footer">
-                    </div>
-                </div>
-
-                <script src="dist/js/popup.js"></script>
-                <div class="popular-movies">
-                    <h2>人気映画</h2>
-                    <div class="content-popular"></div>
-                    <div class="dots"><span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
-                    </div>
-                    <div class="next"></div>
-                </div>
-                <div class="popular-movies">
-                    <h2>新規映画</h2>
-                    <div class="content-popular"></div>
-                    <div class="dots"><span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
-                    </div>
-                    <div class="next"></div>
-                </div>
         </header>
+        <div class="modal" id="myModal">
+
+            <div class='container'>
+                <form class="modal-content animate" action="/action_page.php">
+                    <label style='margin-left:50px;padding-top: 50px;'><b>メールアドレス<br></b></label>
+                    <input type="text" placeholder="メールアドレス" name="uname" required><br>
+                    <label style='margin-left:50px;margin-top: 50px;'><b>パスワード<br></b></label>
+                    <input type="password" placeholder="パスワード" name="psw" required>
+                    <button style='margin-left:50px' type="submit">ログイン</button>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="popular-movies">
+            <h2>人気映画</h2>
+            <div class="content-popular"></div>
+            <div class="dots"><span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+            </div>
+            <div class="next"></div>
+        </div>
+        <div class="popular-movies">
+            <h2>新規映画</h2>
+            <div class="content-popular"></div>
+            <div class="dots"><span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+            </div>
+            <div class="next"></div>
+        </div>
+
         <section id="genre">
             <h3>Browse by Genre</h3>
             <div class="genre-nav">
@@ -81,7 +82,9 @@
                 <div class="circle"></div>
             </div>
         </section>
-        <!-- <section id="featured">
+
+    </div>
+    <!-- <section id="featured">
             <h3>Featured Movies</h3>
             <div class="featured-movies"></div>
             <div class="page page-featured"><button class="prev-page">Prev</button> <span class="page-currently">Page
