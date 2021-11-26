@@ -1,12 +1,23 @@
+// console.log("ha");
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', 'getDetails.php',false);
+// xhr.send("movie_id:1");
+// var result=xhr.responseText;
+// console.log(result);
+// var a=JSON.parse(result);
+// console.log(a);
+// console.log("haha");
+
 var myParent = document.getElementById("movie_post");
 var myImage = document.createElement("img");
 myImage.src = 'a.jpeg';
 myImage.style.width = '300px';
-myImage.style.width = '416px';
+myImage.style.height = '416px';
 myParent.appendChild(myImage);
 
-document.getElementById("movie_des").innerHTML = "世界局势波诡云谲，再度出山的邦德（丹尼尔·克雷格 饰）面临有史以来空前的危机，传奇特工007的故事在本片中达到高潮。新老角色集结亮相，蕾雅·赛杜回归，二度饰演邦女郎玛德琳。系列最恐怖反派萨芬（拉米·马雷克 饰）重磅登场，毫不留情地展示了自己狠辣的一面，不仅揭开了玛德琳身上隐藏的秘密，还酝酿着危及数百万人性命的阴谋，幽灵党的身影也似乎再次浮出水面。半路杀出的新00号特工（拉什纳·林奇 饰）与神秘女子（安娜·德·阿玛斯 饰）看似与邦德同阵作战，但其真实目的依然成谜。关乎邦德生死的新仇旧怨接踵而至，暗潮汹涌之下他能否拯救世界？";
-document.getElementById("movie_point").innerHTML = "7.7";
+document.getElementById("movie_name").innerHTML = result.video_name;
+document.getElementById("movie_des").innerHTML = result.video_intro;
+document.getElementById("movie_point").innerHTML = result.point;
 var review_count = "412341" + "人が評価した"
 document.getElementById("movie_review_count").innerHTML = review_count;
 

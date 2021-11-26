@@ -30,18 +30,20 @@
             </nav>
         </header>
         <div class="modal" id="myModal">
-
             <div class='container'>
                 <form class="modal-content animate" action="/action_page.php">
-                    <label style='margin-left:50px;padding-top: 50px;'><b>メールアドレス<br></b></label>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <label style='margin-top: 50px;'><b>ログイン</b></label>
+                        <button class='close' style='width: 10px;height: 10px;float:right;'>X</button>
+                    </div>
+                    <label style='margin-left:50px;padding-top: 50px;'><b>メールアドレス<br></b></label>                       
                     <input type="text" placeholder="メールアドレス" name="uname" required><br>
                     <label style='margin-left:50px;margin-top: 50px;'><b>パスワード<br></b></label>
                     <input type="password" placeholder="パスワード" name="psw" required>
-                    <button style='margin-left:50px' type="submit">ログイン</button>
+                    <button style='margin-left:50px;background-color:blue' type="submit">ログイン</button>
                     <div class="container" style="background-color:#f1f1f1">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                            class="cancelbtn">Cancel</button>
-                        <span class="psw">Forgot <a href="#">password?</a></span>
+                        <label style='margin-top: 50px;'><b>アカウントを持っていない場合：<br></b></label>
+                        <button type="button" style='background-color:green'id='register'>登録</button>
                     </div>
                 </form>
             </div>
