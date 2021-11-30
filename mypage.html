@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>映画採点</title>
+    <link rel="icon" href="https://img.icons8.com/cotton/64/4a90e2/movie-beginning--v1.png" sizes="16x16"
+        type="image/png">
+    <script defer="defer" src="dist/js/mypage.js"></script>
+    <script src="dist/js/mypage_popup.js"></script>
+    <link href="dist/js/../css/mypage.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header style="height:100px">
+            <nav>
+                <div class="hamburger"></div>
+                <h1>映画<span>採点</span></h1>
+                <ul>
+                    <li><a href="#">ログイン/登録</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <h1 id='movie_name' style="color:#2abeeb">●●さんのマイページ</h1>
+        </div>
+        <div class="container">
+            <!--span id='user_icon'></span-->
+            <!--span style='margin-left:50px;padding-right:100px;color:white;position:absolute;top:290px;width:800px;font-size:20px' id='movie_des'></span-->
+            <h2 id='movie_des' style="color: white;"></h2>
+        </div>
+            <div class="container">
+                <h1 id='movie_name' style="color:#2abeeb">●●さんの投稿一覧</h1>
+                <div class="edit_delete">
+                    <a href="#" id="btn"></a>
+                </div>
+            </div>
+            <div class="modal" id="myModal">
+
+                <div class='container'>
+                    <form class="modal-content animate" action="/action_page.php">
+                        <!--label style='margin-left:50px;padding-top: 50px;'><b>映画名前<br></b></label>
+                        <input type="text" placeholder="映画タイトル" name="uname" required><br-->
+                        <label style='margin-left:50px;margin-top: 50px;'><b>評価ポイント<br></b></label>
+                        <input type="text" placeholder="評価ポイント" name="psw" required><br>
+                        <label style='margin-left:50px;margin-top: 50px;'><b>評価内容<br></b></label>
+                        <input type="text" placeholder="評価内容" name="psw" required>
+                        <button style='margin-left:50px' type="submit">編集する</button>
+                        <button class="delete_button" style='margin-left:50px' type="submit">削除する</button>
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'"class="cancelbtn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+        <div class="container" id='movie_review'>
+        </div>
+    </div>
+</body>
+
+</html>

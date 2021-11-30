@@ -20,7 +20,7 @@
 
 <body>
     <div class="container">
-        <header>
+        <header style='height:150px'>
             <nav>
                 <div class="hamburger"><span></span> <span></span> <span></span></div>
                 <h1>映画<span>採点</span></h1>
@@ -36,55 +36,25 @@
                         <label style='margin-top: 50px;'><b>ログイン</b></label>
                         <button class='close' style='width: 10px;height: 10px;float:right;'>X</button>
                     </div>
-                    <label style='margin-left:50px;padding-top: 50px;'><b>メールアドレス<br></b></label>                       
+                    <label style='margin-left:50px;padding-top: 50px;'><b>メールアドレス<br></b></label>
                     <input type="text" placeholder="メールアドレス" name="uname" required><br>
                     <label style='margin-left:50px;margin-top: 50px;'><b>パスワード<br></b></label>
                     <input type="password" placeholder="パスワード" name="psw" required>
                     <button style='margin-left:50px;background-color:blue' type="submit">ログイン</button>
                     <div class="container" style="background-color:#f1f1f1">
                         <label style='margin-top: 50px;'><b>アカウントを持っていない場合：<br></b></label>
-                        <button type="button" style='background-color:green'id='register'>登録</button>
+                        <button type="button" style='background-color:green' id='register'>登録</button>
                     </div>
                 </form>
             </div>
-
         </div>
 
-        <div class="popular-movies">
-            <h2>人気映画</h2>
-            <div class="content-popular"></div>
-            <div class="dots"><span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
-            </div>
-            <div class="next"></div>
+        <div id="new-movies" style="display:inline">
+            <h1 style="color:white">最新映画</h1>
         </div>
-        <div class="popular-movies">
-            <h2>新規映画</h2>
-            <div class="content-popular"></div>
-            <div class="dots"><span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
-            </div>
-            <div class="next"></div>
+        <div id="good-movies">
+            <h1 style="color:white">好評映画</h1>
         </div>
-
-        <section id="genre">
-            <h3>Browse by Genre</h3>
-            <div class="genre-nav">
-                <ul class="links">
-                    <li data-genre="28" class="active"><a href="#">Action</a></li>
-                    <li data-genre="12"><a href="#">Adventure</a></li>
-                    <li data-genre="27"><a href="#">Horror</a></li>
-                    <li data-genre="10749"><a href="#">Romance</a></li>
-                    <li data-genre="18"><a href="#">Drama</a></li>
-                    <li data-genre="35"><a href="#">Comedy</a></li>
-                </ul>
-            </div>
-            <div class="movies"></div>
-            <div class="page page-genres"><button class="prev-page">Prev</button> <span class="page-currently">Page
-                    1</span> <button class="next-page">Next</button></div>
-            <div class="loading">
-                <div class="circle"></div>
-            </div>
-        </section>
-
     </div>
     <!-- <section id="featured">
             <h3>Featured Movies</h3>
